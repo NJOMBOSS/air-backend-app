@@ -1,4 +1,4 @@
-package airbackendapp.mapper;
+package airbackendapp.mappers;
 
 import airbackendapp.dto.UtilisateurDTO;
 import airbackendapp.models.Utilisateur;
