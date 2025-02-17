@@ -1,12 +1,10 @@
-package tech.fonke.airbackendapp.exceptions;
+package airbackendapp.exceptions;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 @Getter
-public class OperationNonPermittedException extends RuntimeException{
-
+public class OperationNonPermittedException extends RuntimeException {
     // Le message d'erreurs que l'on souhaite afficher
     private final String errorMsg;
 
@@ -18,4 +16,12 @@ public class OperationNonPermittedException extends RuntimeException{
 
     // La dépendance lié au message d'erreurs
     private final String dependency;
+
+    public OperationNonPermittedException(String errorMsg, String operationId, String source, String dependency) {
+        super(errorMsg);
+        this.errorMsg = errorMsg;
+        this.operationId = operationId;
+        this.source = source;
+        this.dependency = dependency;
+    }
 }
